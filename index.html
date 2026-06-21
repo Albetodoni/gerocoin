@@ -1,104 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeroCoin</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#f7e6c4,#d9b67d);
-text-align:center;
-color:#2d1b00;
-}
-
-.hero{
-padding:80px 20px;
-}
-
-h1{
-font-size:70px;
-margin:0;
-}
-
-.subtitle{
-font-size:28px;
-margin-top:10px;
-}
-
-.logo{
-font-size:120px;
-}
-
-.button{
-display:inline-block;
-padding:15px 35px;
-background:#8b5a2b;
-color:white;
-text-decoration:none;
-border-radius:15px;
-margin-top:25px;
-font-size:22px;
-}
-
-.section{
-padding:60px 20px;
-background:white;
-}
-
-footer{
-padding:30px;
-background:#8b5a2b;
-color:white;
-}
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GERONIMO - The King of Nuts</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="nav">
+    <div class="brand">🐿️ GERONIMO</div>
+    <nav>
+      <a href="#countdown">Launch</a>
+      <a href="#game">Game</a>
+      <a href="#memes">Memes</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+  </header>
 
-<div class="hero">
+  <section class="hero">
+    <div class="logo-card">
+      <div class="coin">🐿️</div>
+      <h1>GERONIMO</h1>
+      <p class="subtitle">The King of Nuts</p>
+      <p class="tagline">One squirrel. One mission. Infinite nuts.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#community">Join The Nut Army</a>
+        <a class="btn secondary" href="#memes">Explore Memes</a>
+      </div>
+    </div>
+  </section>
 
-<div class="logo">🐿️🌰</div>
+  <section id="countdown" class="section">
+    <h2>Launch Countdown</h2>
+    <p class="muted">Something big is coming...</p>
+    <div class="countdown">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+  </section>
 
-<h1>GEROCOIN</h1>
+  <section class="section spot">
+    <h2>Can you spot Gero?</h2>
+    <div class="coin-grid">
+      <span>🐶</span><span>🐸</span><span>🐱</span><span>🐵</span><span>🦊</span>
+      <span>🐼</span><span>🐹</span><span class="gero-spot">🐿️</span><span>🐰</span><span>🐻</span>
+      <span>🦁</span><span>🐯</span><span>🐷</span><span>🐮</span><span>🐙</span>
+    </div>
+  </section>
 
-<p class="subtitle">The King Of Nuts</p>
+  <section id="community" class="section">
+    <h2>Community Stats</h2>
+    <div class="stats">
+      <div><strong id="joined">0</strong><span>Squirrels Joined</span></div>
+      <div><strong id="acornTotal">0</strong><span>Acorns Collected</span></div>
+      <div><strong>247</strong><span>Meme Warriors</span></div>
+      <div><strong id="daysLeft">0</strong><span>Days Until Launch</span></div>
+    </div>
+  </section>
 
-<a class="button" href="#">COMING SOON</a>
+  <section id="game" class="section game">
+    <h2>Feed Gero</h2>
+    <p class="muted">Click the button and feed the legend.</p>
+    <button id="feedBtn" class="big-btn">Give Gero an Acorn 🥜</button>
+    <p class="score">Your acorns: <span id="personalAcorns">0</span></p>
+  </section>
 
-</div>
+  <section class="section leaderboard">
+    <h2>Top Nut Hunters</h2>
+    <ol>
+      <li>NutMaster <b>9,420</b></li>
+      <li>GeroHunter <b>7,777</b></li>
+      <li>MoonSquirrel <b>6,969</b></li>
+      <li>AcornKing <b>4,200</b></li>
+      <li>PepeNut <b>3,333</b></li>
+    </ol>
+  </section>
 
-<div class="section">
+  <section id="memes" class="section">
+    <h2>Meme Zone</h2>
+    <div class="memes">
+      <div>GERO sees the dip<br><b>and buys nuts.</b></div>
+      <div>Not financial advice.<br><b>Just squirrel behavior.</b></div>
+      <div>One acorn today.<br><b>Moon tomorrow.</b></div>
+    </div>
+    <button class="btn primary">Submit Your Meme</button>
+  </section>
 
-<h2>About Geronimo</h2>
+  <section id="roadmap" class="section roadmap">
+    <h2>Roadmap</h2>
+    <div class="road">
+      <div><b>Phase 1</b><br>Gero Wakes Up</div>
+      <div><b>Phase 2</b><br>The Nut Army Grows</div>
+      <div><b>Phase 3</b><br>Launch Day</div>
+      <div><b>Phase 4</b><br>Meme Invasion</div>
+      <div><b>Phase 5</b><br>To The Moon</div>
+    </div>
+  </section>
 
-<p>
-Geronimo is just a squirrel.
-He likes acorns.
-That's it.
-</p>
+  <section class="section faq">
+    <h2>FAQ</h2>
+    <details><summary>What is GERONIMO?</summary><p>A meme coin built around Gero, the squirrel king of nuts.</p></details>
+    <details><summary>When is launch?</summary><p>The countdown tells you exactly when the madness begins.</p></details>
+    <details><summary>Is this financial advice?</summary><p>No. Memecoins are highly volatile. Only risk what you can afford to lose.</p></details>
+    <details><summary>Where can I join?</summary><p>Follow the official links in the footer.</p></details>
+  </section>
 
-</div>
+  <footer>
+    <a href="#">X / Twitter</a>
+    <a href="#">Telegram</a>
+    <a href="#">TikTok</a>
+    <a href="#">Dexscreener</a>
+    <p>Memecoins are highly volatile. Only risk what you can afford to lose.</p>
+  </footer>
 
-<div class="section">
-
-<h2>Launch Countdown</h2>
-
-<h1>15 DAYS</h1>
-
-</div>
-
-<footer>
-
-Not financial advice.
-Just nuts. 🌰
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
