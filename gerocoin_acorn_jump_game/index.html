@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GERONIMO - Acorn Jump</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <img src="gero.PNG" alt="GERONIMO logo" class="logo" />
+
+    <section class="game-card">
+      <h1>ACORN JUMP</h1>
+      <p class="hint">Press SPACE, ↑ or tap the screen to jump</p>
+
+      <canvas id="gameCanvas" width="900" height="260"></canvas>
+
+      <div class="game-info">
+        <span>Score: <b id="score">0</b></span>
+        <span>Best: <b id="best">0</b></span>
+      </div>
+
+      <button id="startBtn">START GAME</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
