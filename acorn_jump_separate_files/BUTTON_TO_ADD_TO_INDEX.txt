@@ -1,0 +1,13 @@
+<!-- Put this button in your main index.html where you want the game button to appear -->
+<a href="acorn-jump.html" style="
+  display:inline-block;
+  background:#ffd36a;
+  color:#211300;
+  padding:16px 28px;
+  border-radius:16px;
+  font-weight:900;
+  text-decoration:none;
+  font-family:Arial, sans-serif;
+">
+  🎮 PLAY ACORN JUMP
+</a>
