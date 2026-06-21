@@ -47,14 +47,3 @@ setInterval(() => {
     renderStats();
   }
 }, 5000);
-
-function createAcorn(){
-  const a = document.createElement("div");
-  a.className = "acorn";
-  a.textContent = "🥜";
-  a.style.left = Math.random()*100 + "vw";
-  a.style.animationDuration = (4 + Math.random()*5) + "s";
-  document.body.appendChild(a);
-  setTimeout(()=>a.remove(), 9000);
-}
-setInterval(createAcorn, 600);
