@@ -1,38 +1,238 @@
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070503;color:#fff;overflow-x:hidden}
-.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(7,5,3,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,200,80,.18)}
-.brand{font-weight:900;color:#ffd36a;letter-spacing:2px}
-nav a{color:#eee;margin-left:18px;text-decoration:none;font-weight:700}
-nav a:hover{color:#ffd36a}
-.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:45px 20px;background:radial-gradient(circle at center,#3b260d 0,#070503 60%)}
-.hero-content{max-width:850px}
-.main-logo{width:min(360px,82vw);border-radius:50%;box-shadow:0 0 90px #ffb000,0 0 25px #fff;border:4px solid #ffd36a;background:#f4dfb5}
-h1{font-size:clamp(50px,11vw,120px);margin:25px 0 0;letter-spacing:4px;color:#ffd36a;text-shadow:0 0 25px #ffb000}
-.subtitle{font-size:30px;color:#ffd36a;font-weight:900;margin:8px 0}
-.tagline{font-size:22px;color:#eee}
-.btn,.big-btn{display:inline-block;border:0;border-radius:16px;padding:15px 24px;margin:8px;text-decoration:none;font-weight:900;cursor:pointer;transition:.2s}
-.primary,.big-btn{background:#ffd36a;color:#211300}
-.secondary{border:1px solid #ffd36a;color:#ffd36a;background:transparent}
-.btn:hover,.big-btn:hover{transform:translateY(-3px);box-shadow:0 0 25px rgba(255,211,106,.5)}
-.section{padding:70px 8%;text-align:center;border-top:1px solid rgba(255,200,80,.12)}
-h2{font-size:42px;margin:0 0 10px}
-.muted{color:#bfb6a5}
-.countdown,.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
-.countdown div,.stats div,.leaderboard ol,.road div,details,.spot-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,211,106,.25);border-radius:20px;padding:24px;box-shadow:0 0 25px rgba(0,0,0,.25)}
-.countdown span,.stats strong{display:block;font-size:42px;color:#ffd36a;font-weight:900}
-.countdown small,.stats span{color:#ddd}
-.character-sheet{max-width:1000px;width:100%;border-radius:24px;border:2px solid rgba(255,211,106,.45);box-shadow:0 0 45px rgba(255,179,0,.35);margin-top:26px}
-.spot-box{max-width:850px;margin:30px auto;display:flex;align-items:center;gap:25px;text-align:left}
-.spot-box img{width:190px;border-radius:50%;box-shadow:0 0 35px #ffb000}
-.spot-box h3{font-size:30px;color:#ffd36a;margin:0 0 8px}
-.big-btn{font-size:24px}
-.score{font-size:22px}
-.leaderboard ol{max-width:520px;margin:25px auto;text-align:left}
-.leaderboard li{padding:14px;border-bottom:1px solid rgba(255,255,255,.1)}
-.leaderboard b{float:right;color:#ffd36a}
-.road{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-details{max-width:750px;margin:12px auto;text-align:left}
-summary{cursor:pointer;font-weight:900;color:#ffd36a}
-footer{text-align:center;padding:40px 8%;background:#030201}
-footer a{color:#ffd36a;margin:0 10px}
-@media(max-width:800px){.countdown,.stats,.road{grid-template-columns:1fr}.spot-box{flex-direction:column;text-align:center}nav{display:none}h2{font-size:32px}}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.6;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:#151515;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+.brand{
+  font-size:28px;
+  font-weight:900;
+  color:#ffb347;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.main-logo{
+  width:260px;
+  border-radius:50%;
+  border:5px solid #ffb347;
+  box-shadow:0 0 40px rgba(255,179,71,.5);
+}
+
+.hero h1{
+  font-size:70px;
+  margin-top:20px;
+}
+
+.subtitle{
+  color:#ffb347;
+  font-size:28px;
+  margin-top:10px;
+}
+
+.tagline{
+  margin-top:15px;
+  font-size:20px;
+}
+
+.buttons{
+  margin-top:25px;
+}
+
+.btn,
+.big-btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  margin:8px;
+}
+
+.primary,
+.big-btn{
+  background:#ffb347;
+  color:black;
+}
+
+.secondary{
+  border:2px solid #ffb347;
+  color:#ffb347;
+}
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:40px;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.countdown div{
+  background:#1a1a1a;
+  border-radius:20px;
+  text-align:center;
+  padding:30px;
+}
+
+.countdown span{
+  font-size:50px;
+  font-weight:900;
+  color:#ffb347;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.stats div{
+  background:#1a1a1a;
+  border-radius:20px;
+  text-align:center;
+  padding:30px;
+}
+
+.stats strong{
+  display:block;
+  font-size:40px;
+  color:#ffb347;
+}
+
+.form-box{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+.form-box input{
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  width:250px;
+}
+
+.score{
+  text-align:center;
+  margin-top:20px;
+  font-size:22px;
+}
+
+#leaderboardList{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:20px;
+}
+
+#leaderboardList li{
+  margin:10px 0;
+  font-size:20px;
+}
+
+.character-sheet{
+  display:block;
+  margin:auto;
+  width:300px;
+  border-radius:20px;
+}
+
+.road{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+}
+
+.road div{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.faq details{
+  background:#1a1a1a;
+  margin-bottom:15px;
+  padding:15px;
+  border-radius:12px;
+}
+
+footer{
+  text-align:center;
+  padding:50px;
+  background:#151515;
+}
+
+footer a{
+  color:#ffb347;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+@media(max-width:900px){
+
+  .countdown,
+  .stats,
+  .road{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .main-logo{
+    width:180px;
+  }
+
+  .form-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .nav{
+    flex-direction:column;
+    gap:10px;
+  }
+}
