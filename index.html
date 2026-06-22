@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,13 +7,15 @@
   <title>GERONIMO - The King of Nuts</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="nav">
     <div class="brand">GERONIMO</div>
     <nav>
       <a href="#countdown">Launch</a>
-      <a href="#game">Game</a>
-      <a href="#meet">Meet Gero</a>
+      <a href="#game">Acorns</a>
+      <a href="#leaderboard">Ranking</a>
+      <a href="#story">Story</a>
       <a href="#roadmap">Roadmap</a>
     </nav>
   </header>
@@ -21,18 +24,18 @@
     <div class="hero-content">
       <img src="gero.PNG" alt="Official Geronimo logo" class="main-logo" />
       <h1>GERONIMO</h1>
-      <p class="subtitle">The King of Nuts</p>
+      <p class="subtitle">The King of Nuts 🌰</p>
       <p class="tagline">One squirrel. One mission. Infinite nuts.</p>
       <div class="buttons">
-        <a class="btn primary" href="#community">Join The Nut Army</a>
-        <a class="btn secondary" href="#meet">Meet Gero</a>
+        <a class="btn primary" href="#game">Join The Nut Army</a>
+        <a class="btn secondary" href="#story">Meet Gero</a>
       </div>
     </div>
   </section>
 
   <section id="countdown" class="section">
     <h2>Launch Countdown</h2>
-    <p class="muted">Something big is coming...</p>
+    <p class="muted">Gero launches in 18 days.</p>
     <div class="countdown">
       <div><span id="days">00</span><small>Days</small></div>
       <div><span id="hours">00</span><small>Hours</small></div>
@@ -47,51 +50,74 @@
     <img src="imagen de gero.PNG" alt="Official Geronimo character sheet" class="character-sheet" />
   </section>
 
-  <section class="section spot">
-    <h2>Can you spot Gero?</h2>
-    <p class="muted">Among thousands of memes, only one squirrel wants the crown.</p>
-    <div class="spot-box">
-      <img src="gero.PNG" alt="Geronimo highlighted" />
-      <div>
-        <h3>Official Gero Only</h3>
-        <p>No generic squirrel. No random mascot. This is the real Geronimo.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="community" class="section">
     <h2>Community Stats</h2>
     <div class="stats">
       <div><strong id="joined">0</strong><span>Squirrels Joined</span></div>
       <div><strong id="acornTotal">0</strong><span>Acorns Collected</span></div>
-      <div><strong>247</strong><span>Meme Warriors</span></div>
-      <div><strong id="daysLeft">0</strong><span>Days Until Launch</span></div>
+      <div><strong id="visits">0</strong><span>Visitors</span></div>
+      <div><strong id="daysLeft">18</strong><span>Days Until Launch</span></div>
     </div>
   </section>
 
   <section id="game" class="section game">
-    <h2>Feed Gero</h2>
-    <p class="muted">Click the button and feed the legend.</p>
-    <button id="feedBtn" class="big-btn">Give Gero an Acorn</button>
-    <p class="score">Your acorns: <span id="personalAcorns">0</span></p>
+    <h2>Feed Gero 🌰</h2>
+    <p class="muted">Register, click the button and feed the legend.</p>
+
+```
+<input id="nameInput" type="text" placeholder="Your name" />
+<input id="emailInput" type="email" placeholder="Your email" />
+
+<div class="buttons">
+  <button id="registerBtn" class="big-btn">Register</button>
+  <button id="feedBtn" class="big-btn">Give Gero an Acorn 🌰</button>
+</div>
+
+<p class="score">Your acorns: <span id="personalAcorns">0</span></p>
+```
+
   </section>
 
-  <section class="section leaderboard">
-    <h2>Top Nut Hunters</h2>
-    <ol>
-      <li>NutMaster <b>9,420</b></li>
-      <li>GeroHunter <b>7,777</b></li>
-      <li>MoonSquirrel <b>6,969</b></li>
-      <li>AcornKing <b>4,200</b></li>
-      <li>PepeNut <b>3,333</b></li>
+  <section id="leaderboard" class="section leaderboard">
+    <h2>🏆 Top Acorn Hunters</h2>
+    <ol id="leaderboardList">
+      <li>No hunters yet. Be the first 🌰</li>
     </ol>
+  </section>
+
+  <section id="story" class="section">
+    <h2>🐿️ Who Is Geronimo?</h2>
+    <p>
+      My name is Geronimo, but you can call me Gero.
+      I am a mischievous squirrel collecting acorns before launch day.
+      I have been working in silence, building my acorn empire one nut at a time.
+      Some people chase charts. I chase acorns.
+      One day, I will become The King of Nuts.
+    </p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>What Is GeroCoin?</h2>
+    <p>
+      GeroCoin is a meme coin project built around Geronimo, community, memes and acorns.
+      It is made for people who enjoy internet culture, funny characters and high-energy community projects.
+      Memecoins are risky and volatile, so never invest money you cannot afford to lose.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>🎮 Gero Jump</h2>
+    <p>
+      Coming soon: a simple mini game where Gero jumps over trees, collects acorns and tries to survive as long as possible.
+      Inspired by the Google Dinosaur Game.
+    </p>
   </section>
 
   <section id="roadmap" class="section roadmap">
     <h2>Roadmap</h2>
     <div class="road">
-      <div><b>Phase 1</b><br>Gero Wakes Up</div>
-      <div><b>Phase 2</b><br>The Nut Army Grows</div>
+      <div><b>Phase 1</b><br>Collect acorns</div>
+      <div><b>Phase 2</b><br>Build the Nut Army</div>
       <div><b>Phase 3</b><br>Launch Day</div>
       <div><b>Phase 4</b><br>Meme Invasion</div>
       <div><b>Phase 5</b><br>To The Moon</div>
@@ -111,9 +137,10 @@
     <a href="#">Telegram</a>
     <a href="#">TikTok</a>
     <a href="#">Dexscreener</a>
-    <p>Memecoins are highly volatile. Only risk what you can afford to lose.</p>
+    <p>Not financial advice. Just nuts. 🌰</p>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
