@@ -397,3 +397,34 @@ margin:20px;
     font-weight:bold;
     color:#ffb347;
 }
+.section-subtitle{
+    text-align:center;
+    color:#d6d6d6;
+    font-size:20px;
+    margin:-10px auto 35px auto;
+    max-width:750px;
+    line-height:1.6;
+}
+
+.launch-section,
+.stats-section{
+    background:linear-gradient(180deg,#24180d,#1a120d);
+    border-radius:35px;
+    padding:45px;
+    box-shadow:0 0 40px rgba(255,140,0,.15);
+}
+
+.countdown div,
+.stats div{
+    background:linear-gradient(180deg,#140b03,#090909);
+    border:1px solid rgba(255,180,70,.5);
+    border-radius:25px;
+    transition:.25s;
+    box-shadow:0 0 20px rgba(255,140,0,.15);
+}
+
+.countdown div:hover,
+.stats div:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 0 35px rgba(255,140,0,.35);
+}
