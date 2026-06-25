@@ -155,3 +155,191 @@ listenUser();
 listenLeaderboard();
 listenStats();
 countVisit();
+/* =========================
+   GERO JUMP GAME
+========================= */
+
+const geroCanvas = document.getElementById("geroGame");
+const geroCtx = geroCanvas ? geroCanvas.getContext("2d") : null;
+
+let jumpGameRunning = false;
+let jumpGameStarted = false;
+
+let gero = {
+  x: 90,
+  y: 185,
+  width: 46,
+  height: 46,
+  velocityY: 0,
+  gravity: 0.75,
+  jumpPower: -15,
+  onGround: true
+};
+
+let geroObstacles = [];
+let geroAcorns = [];
+let geroScore = 0;
+let geroBestScore = Number(localStorage.getItem("geroBestScore")) || 0;
+let geroSpeed = 6;
+let geroFrame = 0;
+
+const bestScoreEl = document.getElementById("bestScore");
+const gameAcornsEl = document.getElementById("gameAcorns");
+
+if (bestScoreEl) bestScoreEl.textContent = geroBestScore;
+
+function startGeroJump() {
+  if (!geroCanvas || !geroCtx) return;
+
+  jumpGameRunning = true;
+  jumpGameStarted = true;
+
+  gero.y = 185;
+  gero.velocityY = 0;
+  gero.onGround = true;
+
+  geroObstacles = [];
+  geroAcorns = [];
+  geroScore = 0;
+  geroSpeed = 6;
+  geroFrame = 0;
+
+  updateGeroJump();
+}
+
+function geroJump() {
+  if (!jumpGameStarted || !jumpGameRunning) {
+    startGeroJump();
+    return;
+  }
+
+  if (gero.onGround) {
+    gero.velocityY = gero.jumpPower;
+    gero.onGround = false;
+  }
+}
+
+function updateGeroJump() {
+  if (!jumpGameRunning || !geroCtx) return;
+
+  geroFrame++;
+
+  geroCtx.clearRect(0, 0, geroCanvas.width, geroCanvas.height);
+
+  geroCtx.fillStyle = "#080808";
+  geroCtx.fillRect(0, 0, geroCanvas.width, geroCanvas.height);
+
+  geroCtx.fillStyle = "#ffb347";
+  geroCtx.fillRect(0, 225, geroCanvas.width, 4);
+
+  gero.velocityY += gero.gravity;
+  gero.y += gero.velocityY;
+
+  if (gero.y >= 185) {
+    gero.y = 185;
+    gero.velocityY = 0;
+    gero.onGround = true;
+  }
+
+  geroCtx.font = "42px Arial";
+  geroCtx.fillText("🐿️", gero.x, gero.y + 38);
+
+  if (geroFrame % 90 === 0) {
+    geroObstacles.push({
+      x: geroCanvas.width,
+      y: 190,
+      width: 40,
+      height: 45,
+      type: Math.random() > 0.5 ? "🌲" : "🪨"
+    });
+  }
+
+  if (geroFrame % 130 === 0) {
+    geroAcorns.push({
+      x: geroCanvas.width,
+      y: 80 + Math.random() * 70,
+      width: 30,
+      height: 30
+    });
+  }
+
+  geroObstacles.forEach((obstacle, index) => {
+    obstacle.x -= geroSpeed;
+
+    geroCtx.font = "38px Arial";
+    geroCtx.fillText(obstacle.type, obstacle.x, obstacle.y + 38);
+
+    if (obstacle.x + obstacle.width < 0) {
+      geroObstacles.splice(index, 1);
+      geroScore += 5;
+    }
+
+    if (
+      gero.x < obstacle.x + obstacle.width &&
+      gero.x + gero.width > obstacle.x &&
+      gero.y < obstacle.y + obstacle.height &&
+      gero.y + gero.height > obstacle.y
+    ) {
+      endGeroJump();
+    }
+  });
+
+  geroAcorns.forEach((acorn, index) => {
+    acorn.x -= geroSpeed;
+
+    geroCtx.font = "30px Arial";
+    geroCtx.fillText("🌰", acorn.x, acorn.y);
+
+    if (
+      gero.x < acorn.x + acorn.width &&
+      gero.x + gero.width > acorn.x &&
+      gero.y < acorn.y + acorn.height &&
+      gero.y + gero.height > acorn.y
+    ) {
+      geroAcorns.splice(index, 1);
+      geroScore += 20;
+    }
+
+    if (acorn.x + acorn.width < 0) {
+      geroAcorns.splice(index, 1);
+    }
+  });
+
+  if (geroFrame % 1800 === 0) {
+    geroSpeed += 1;
+  }
+
+  if (gameAcornsEl) gameAcornsEl.textContent = geroScore;
+
+  geroCtx.fillStyle = "#ffb347";
+  geroCtx.font = "22px Arial";
+  geroCtx.fillText("Score: " + geroScore, 20, 35);
+
+  requestAnimationFrame(updateGeroJump);
+}
+
+function endGeroJump() {
+  jumpGameRunning = false;
+
+  if (geroScore > geroBestScore) {
+    geroBestScore = geroScore;
+    localStorage.setItem("geroBestScore", geroBestScore);
+    if (bestScoreEl) bestScoreEl.textContent = geroBestScore;
+  }
+
+  setTimeout(() => {
+    alert("Game Over 🌰 Score: " + geroScore + "\nPress SPACE or tap the game to play again.");
+  }, 100);
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.code === "Space" || event.code === "ArrowUp") {
+    event.preventDefault();
+    geroJump();
+  }
+});
+
+if (geroCanvas) {
+  geroCanvas.addEventListener("click", geroJump);
+  geroCanvas.addEventListener("touchstart", geroJump);
+}
