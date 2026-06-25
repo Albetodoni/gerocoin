@@ -308,3 +308,37 @@ margin:20px;
     line-height:1.8;
     font-size:18px;
 }
+...última regla CSS...
+
+}
+
+/* PEGA AQUÍ DEBAJO */
+
+.story-section{
+    max-width:1100px;
+    margin:80px auto;
+}
+
+.story-card{
+    background:linear-gradient(180deg,#161616,#0d0d0d);
+    border:1px solid rgba(255,179,71,.25);
+    border-radius:28px;
+    padding:45px;
+    box-shadow:0 0 35px rgba(255,140,0,.12);
+}
+
+.story-card p{
+    font-size:20px;
+    line-height:1.8;
+    color:#eee;
+    margin-bottom:22px;
+    text-align:left;
+}
+
+.story-highlight{
+    color:#ffb347 !important;
+    font-size:26px !important;
+    font-weight:900;
+    text-align:center !important;
+    margin-top:30px;
+}
