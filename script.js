@@ -260,7 +260,7 @@ if (gameBackground.complete) {
       y: 190,
       width: 40,
       height: 45,
-   type: Math.random() > 0.5 ? "🪺" : "🍂"
+  type: Math.random() > 0.5 ? "🌳" : "🪵"
     });
   }
 
