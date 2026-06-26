@@ -162,7 +162,7 @@ countVisit();
 const geroCanvas = document.getElementById("geroGame");
 const geroCtx = geroCanvas ? geroCanvas.getContext("2d") : null;
 const gameBackground = new Image();
-gameBackground.src = "forest-bg.png";
+gameBackground.src = "game-background.png";
 let jumpGameRunning = false;
 let jumpGameStarted = false;
 
