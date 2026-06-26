@@ -526,3 +526,34 @@ margin:20px;
     color:#999;
     font-size:14px;
 }
+.challenge-banner{
+    max-width:700px;
+    margin:20px auto;
+    padding:18px;
+    border-radius:18px;
+
+    background:linear-gradient(180deg,#2b1b08,#1b130c);
+    border:2px solid #ffb347;
+
+    text-align:center;
+
+    box-shadow:0 0 25px rgba(255,170,0,.25);
+}
+
+.challenge-banner h2{
+    color:#ffb347;
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.challenge-banner h3{
+    color:#ffffff;
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.challenge-banner p{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.7;
+}
