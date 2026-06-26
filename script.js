@@ -164,6 +164,11 @@ const geroCtx = geroCanvas ? geroCanvas.getContext("2d") : null;
 const gameBackground = new Image();
 
 gameBackground.src = "game-background.png.png";
+gameBackground.onload = function () {
+    if (geroCtx) {
+        geroCtx.drawImage(gameBackground, 0, 0, geroCanvas.width, geroCanvas.height);
+    }
+};
 let jumpGameRunning = false;
 let jumpGameStarted = false;
 
