@@ -240,7 +240,7 @@ if (gameBackground.complete) {
     geroCtx.fillRect(0, 0, geroCanvas.width, geroCanvas.height);
 }
   geroCtx.fillStyle = "#ffb347";
-  geroCtx.fillRect(0, 225, geroCanvas.width, 4);
+ 
 
   gero.velocityY += gero.gravity;
   gero.y += gero.velocityY;
