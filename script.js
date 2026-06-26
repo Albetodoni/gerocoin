@@ -226,9 +226,12 @@ function updateGeroJump() {
 
   geroCtx.clearRect(0, 0, geroCanvas.width, geroCanvas.height);
 
-  geroCtx.fillStyle = "#080808";
-  geroCtx.fillRect(0, 0, geroCanvas.width, geroCanvas.height);
-
+if (gameBackground.complete) {
+    geroCtx.drawImage(gameBackground, 0, 0, geroCanvas.width, geroCanvas.height);
+} else {
+    geroCtx.fillStyle = "#080808";
+    geroCtx.fillRect(0, 0, geroCanvas.width, geroCanvas.height);
+}
   geroCtx.fillStyle = "#ffb347";
   geroCtx.fillRect(0, 225, geroCanvas.width, 4);
 
