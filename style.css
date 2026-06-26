@@ -452,3 +452,21 @@ margin:20px;
     background-position:center;
     background-repeat:no-repeat;
 }
+.music-btn{
+    display:block;
+    margin:15px auto 25px auto;
+    padding:12px 28px;
+    border-radius:30px;
+    border:1px solid rgba(255,179,71,.7);
+    background:#120905;
+    color:#ffb347;
+    font-weight:900;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,140,0,.25);
+}
+
+.music-btn:hover{
+    background:#ff9f1a;
+    color:black;
+    transform:scale(1.05);
+}
