@@ -470,3 +470,59 @@ margin:20px;
     color:black;
     transform:scale(1.05);
 }
+.champion-card{
+    max-width:900px;
+    margin:50px auto;
+    padding:30px;
+    background:#1d1712;
+    border:2px solid #ffb347;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(255,170,0,.25);
+}
+
+.champion-card h2{
+    color:#ffb347;
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.champion-text{
+    color:white;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.rewards{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.reward{
+    width:180px;
+    padding:20px;
+    background:#2b2119;
+    border:2px solid #ffb347;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.reward:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px orange;
+}
+
+.reward span{
+    display:block;
+    margin-top:10px;
+    color:white;
+    font-size:16px;
+}
+
+.small{
+    margin-top:25px;
+    color:#999;
+    font-size:14px;
+}
