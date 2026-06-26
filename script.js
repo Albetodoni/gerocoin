@@ -353,3 +353,25 @@ if (geroCanvas) {
   geroCanvas.addEventListener("click", geroJump);
   geroCanvas.addEventListener("touchstart", geroJump);
 }
+const musicBtn = document.getElementById("musicBtn");
+const bgMusic = document.getElementById("bgMusic");
+
+let musicPlaying = false;
+
+if (bgMusic) {
+  bgMusic.volume = 0.18;
+}
+
+if (musicBtn && bgMusic) {
+  musicBtn.addEventListener("click", async () => {
+    if (!musicPlaying) {
+      bgMusic.play();
+      musicPlaying = true;
+      musicBtn.textContent = "🔊 Music ON";
+    } else {
+      bgMusic.pause();
+      musicPlaying = false;
+      musicBtn.textContent = "🔇 Music OFF";
+    }
+  });
+}
