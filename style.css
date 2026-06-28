@@ -557,34 +557,39 @@ margin:20px;
     font-size:18px;
     line-height:1.7;
 }
+
+}
 .meme-gallery{
-    margin:60px auto;
-    max-width:1000px;
+    max-width:900px;
+    margin:50px auto;
     text-align:center;
 }
 
 .meme-gallery h2{
     color:#ffb347;
-    font-size:42px;
-    margin-bottom:30px;
+    font-size:34px;
+    margin-bottom:25px;
 }
 
 .meme-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+    grid-template-columns:repeat(2,320px);
+    justify-content:center;
+    gap:20px;
 }
 
 .meme-grid img{
-    width:100%;
+    width:320px;
+    height:320px;
+    object-fit:cover;
     border-radius:18px;
     border:3px solid #ffb347;
-    transition:.3s;
+    box-shadow:0 0 15px rgba(255,179,71,.25);
+    transition:.25s;
     cursor:pointer;
-    box-shadow:0 0 20px rgba(255,179,71,.25);
 }
 
 .meme-grid img:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 35px rgba(255,179,71,.7);
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 0 25px rgba(255,179,71,.6);
 }
