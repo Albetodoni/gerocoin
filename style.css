@@ -720,16 +720,17 @@ margin:20px;
 
   .game-container{
     width:100%;
-    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
   }
 
-  #geroGame
-    width:100% !important;
-    height:auto !important;
-    aspect-ratio:900 / 250;
+  #geroGame{
+    width:900px !important;
+    height:250px !important;
+    max-width:none !important;
     display:block;
   }
 
 }
-
 
