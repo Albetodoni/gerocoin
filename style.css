@@ -716,3 +716,18 @@ margin:20px;
     font-size:14px;
   }
 }
+@media (max-width: 768px) {
+
+  .game-container{
+    width:100%;
+    overflow:hidden;
+  }
+
+  #geroGame{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:900 / 250;
+    display:block;
+  }
+
+}
