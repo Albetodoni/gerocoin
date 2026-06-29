@@ -593,3 +593,62 @@ margin:20px;
     transform:translateY(-6px) scale(1.03);
     box-shadow:0 0 25px rgba(255,179,71,.6);
 }
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .hero,
+    .section,
+    .story-card,
+    .challenge-banner{
+        width:95%;
+        margin:auto;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    h3{
+        font-size:22px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .stats,
+    .countdown,
+    .roadmap-grid,
+    .meme-grid{
+        grid-template-columns:1fr;
+    }
+
+    .meme-grid img{
+        width:100%;
+        height:auto;
+    }
+
+    .buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    canvas{
+        width:100%;
+        height:auto;
+    }
+}
