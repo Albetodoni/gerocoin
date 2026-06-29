@@ -726,11 +726,11 @@ margin:20px;
   }
 
   #geroGame{
-    width:900px !important;
-    height:250px !important;
-    max-width:none !important;
+    width:100% !important;
+    max-width:900px !important;
+    height:auto !important;
+    aspect-ratio:900 / 250;
     display:block;
-  }
-
+    margin:0 auto;
 }
 
