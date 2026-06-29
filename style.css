@@ -723,7 +723,7 @@ margin:20px;
     overflow:hidden;
   }
 
-  #geroGame{
+  #geroGame
     width:100% !important;
     height:auto !important;
     aspect-ratio:900 / 250;
@@ -731,3 +731,5 @@ margin:20px;
   }
 
 }
+
+
