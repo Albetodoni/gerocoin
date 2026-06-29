@@ -1,7 +1,4 @@
-const launchDate = new Date();
-launchDate.setDate(launchDate.getDate() + 18);
-launchDate.setHours(20, 0, 0, 0);
-
+const launchDate = new Date("2026-07-13T20:00:00+02:00");
 const firebaseConfig = {
   apiKey: "AIzaSyCdbdu-CSZXa2MTJ0aB0AQy0jm1DQlwVjc",
   authDomain: "gerocoin.firebaseapp.com",
