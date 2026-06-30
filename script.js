@@ -90,7 +90,7 @@ function listenUser(){
 function listenLeaderboard(){
   db.collection("usuarios")
     .orderBy("bellotas", "desc")
-    .limit(10)
+    .limit(100)
     .onSnapshot((snapshot) => {
       const list = $("leaderboardList");
       list.innerHTML = "";
