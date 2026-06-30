@@ -732,3 +732,9 @@ margin:20px;
     display:block;
     margin:0 auto;
 }
+#leaderboardList{
+    max-height:520px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding-right:10px;
+}
